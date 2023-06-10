@@ -1,6 +1,6 @@
 const Light = {
-  text: '#fc5531',
-  bg: '#4d85ff'
+  // 字体主题颜色
+  mainColor: "#bfccdb"
 }
 
 export default Light

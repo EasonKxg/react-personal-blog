@@ -1,7 +1,12 @@
 import React, { memo } from "react";
-
+import { LoginStyleWrap } from "./style";
 const Login = memo(() => {
-  return <div>Login</div>;
+  return (
+    <LoginStyleWrap>
+      
+    </LoginStyleWrap>
+  ) 
+
 });
 
 export default Login;
