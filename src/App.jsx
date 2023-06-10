@@ -1,9 +1,13 @@
-import React, { memo } from 'react'
+import React, { memo } from "react";
+import { useRoutes } from "react-router-dom";
+import router from "router";
 
 const App = memo(() => {
   return (
-    <div>App</div>
-  )
-})
+    <>
+      <div>{useRoutes(router)}</div>
+    </>
+  );
+});
 
-export default App
+export default App;
