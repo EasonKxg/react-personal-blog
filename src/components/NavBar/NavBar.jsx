@@ -1,10 +1,10 @@
 import React, { memo, useState } from "react";
 import classNames from "classnames";
+import IconFont from "components/IconFont/IconFont";
 import { NavBarStyleWrap } from "./style";
 
 const NavBar = memo(() => {
-  const [activeNabBar, setActiveNabBar] = useState(0);
-  console.log(activeNabBar);
+  const [activeIndex, setActiveIndex] = useState(0);
   const navBarList = ["首页", "归档", "分类", "标签", "关于"];
   return (
     <NavBarStyleWrap>
@@ -16,12 +16,18 @@ const NavBar = memo(() => {
               return (
                 <li
                   key={item}
-                  className={classNames("active-nabBar", activeNabBar === 0)}
+                  className={classNames({
+                    "active-nabBar": activeIndex === index,
+                  })}
+                  onClick={() => setActiveIndex(index)}
                 >
                   {item}
                 </li>
               );
             })}
+            <li>
+              <IconFont type="icon-sousuo" />
+            </li>
           </ul>
         </div>
       </div>

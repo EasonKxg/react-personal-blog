@@ -33,7 +33,7 @@ export const NavBarStyleWrap = styled.div`
           text-align: center;
         }
         .active-nabBar{
-          color: red;
+          color: #ffffff;
         }
       }
     }
